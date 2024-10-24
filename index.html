@@ -17,6 +17,23 @@
             }
         }
     </script>
+    <style>
+        @keyframes appear {
+            from {
+                opacity: 0;
+                scale:0.5;
+        }
+        to{
+            opacity: 1;
+            scale:1;
+        }
+        }
+        #block{
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+    </style>
 </head>
 <body class="bg-primary min-h-screen text-white">
     <!-- Navigation Section -->
@@ -65,18 +82,22 @@
     </section>
 
     <!-- Featured Section -->
-    <div class="text-center">
+    <div class="text-center" id="block">
         <p class="mx-auto max-w-[179px] font-extrabold text-2xl mb-5">As Featured In</p>
-        <div class="bg-secondary bg-opacity-30 w-full max-w-[1065px] mx-auto py-8 px-6 flex flex-wrap justify-center items-center gap-8">
+        <div class="bg-secondary bg-opacity-30 w-full max-w-[1065px] mx-auto py-8 px-6 ">
+            <marquee behavior="" scrollamount="25" direction="">
+            <div class="flex flex-wrap justify-center items-center gap-8">
             <img src="img/image 6.svg" alt="Featured Logo 1" class="h-12">
             <img src="img/image 5.svg" alt="Featured Logo 2" class="h-12">
             <img src="img/image 7.svg" alt="Featured Logo 3" class="h-12">
             <img src="img/image 8.svg" alt="Featured Logo 4" class="h-12">
+            </div>
+        </marquee>
         </div>
     </div>
 
     <!-- Analytics Section -->
-    <div class="w-full max-w-[985px] mx-auto mt-20 flex flex-col md:flex-row items-center px-6">
+    <div class="w-full max-w-[985px] mx-auto mt-20 flex flex-col md:flex-row items-center px-6" id="block">
         <img src="img/Other 19.svg" alt="Analytics" class="mb-8 md:mb-0 md:mr-8 animate-pulse">
         <div>
             <h3 class="font-extrabold text-xl mb-4">Analytics</h3>
@@ -89,7 +110,7 @@
     </div>
 
     <!-- Trading Experience Section -->
-    <div class="w-full max-w-[1021px] mx-auto mt-20 flex flex-col-reverse md:flex-row items-center px-6">
+    <div class="w-full max-w-[1021px] mx-auto mt-20 flex flex-col-reverse md:flex-row items-center px-6" id="block">
         <div class="md:mr-8">
             <h3 class="font-extrabold text-xl mb-4">Analytics</h3>
             <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Seamless Trading Experience</h2>
@@ -102,7 +123,7 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="w-full max-w-[1065px] mx-auto mt-20 mb-20">
+    <div class="w-full max-w-[1065px] mx-auto mt-20 mb-20" id="block">
         <section class="flex items-center justify-center h-[441px] bg-gradient-to-br from-purple-700 to-purple-500 rounded-lg px-6">
             <div class="text-center">
                 <p class="text-base tracking-wider font-semibold uppercase mb-4">Are you ready?</p>
@@ -139,7 +160,7 @@
 
                 <!-- Links Section 2: market -->
                 <div class="col-span-1">
-                    <h2 class="font-semibold mb-4">market</h2>
+                    <h2 class="font-extrabold mb-4">MARKET</h2>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-purple-400">Browse NFTs</a></li>
                         <li><a href="#" class="hover:text-purple-400">Buy NFTs</a></li>
@@ -149,7 +170,7 @@
 
                 <!-- Links Section 3: contact -->
                 <div class="col-span-1">
-                    <h2 class="font-semibold mb-4">contact</h2>
+                    <h2 class="font-extrabold mb-4">CONTACT</h2>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-purple-400">LinkedIn</a></li>
                         <li><a href="#" class="hover:text-purple-400">Instagram</a></li>
@@ -159,7 +180,7 @@
 
                 <!-- Newsletter Section -->
                 <div class="col-span-1 sm:col-span-2 md:col-span-1">
-                    <h2 class="font-semibold mb-4">join our newsletter</h2>
+                    <h2 class="font-extrabold mb-4">Join Our Newsletter</h2>
                     <form class="flex flex-col sm:flex-row">
                         <input type="email" placeholder="Email Address"
                             class="px-4 py-2 rounded-l-full bg-[#0B0C1B] text-white placeholder-gray-400 focus:outline-none mb-2 sm:mb-0">
