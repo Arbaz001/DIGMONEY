@@ -39,24 +39,45 @@
     <!-- Navigation Section -->
     <nav class="w-full max-w-[1067px] h-[60px] mx-auto mt-[35px] flex items-center justify-between px-6">
         <!-- Company Name -->
-        <div class="text-xl font-extrabold animate-pulse">
+        <div class="text-3xl font-extrabold animate-pulse">
             DIGMONEY
         </div>
-        <!-- Navigation Links - Hidden on mobile, visible on larger screens -->
+        
+        <!-- Desktop Navigation Links -->
         <ul class="hidden md:flex space-x-8 text-lg font-medium">
             <li><a href="#" class="hover:text-purple-400">About</a></li>
             <li><a href="#" class="hover:text-purple-400">Pricing</a></li>
             <li><a href="#" class="hover:text-purple-400">Contact</a></li>
             <li><a href="#" class="hover:text-purple-400">NFTS</a></li>
         </ul>
+    
         <!-- Mobile Menu Button -->
-        <button class="md:hidden p-2 rounded-md hover:bg-purple-700">
+        <button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-purple-700 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
             <span class="sr-only">Open menu</span>
         </button>
     </nav>
+    
+    <!-- Mobile Dropdown Menu - Initially hidden -->
+    <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center space-y-4 mt-4 ml-[350px] text-lg font-medium bg-white p-2 shadow-lg rounded-lg">
+        <a href="#" class="hover:text-purple-400">About</a>
+        <a href="#" class="hover:text-purple-400">Pricing</a>
+        <a href="#" class="hover:text-purple-400">Contact</a>
+        <a href="#" class="hover:text-purple-400">NFTS</a>
+    </div>
+    
+    <script>
+        // JavaScript to toggle mobile menu visibility
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
 
     <!-- Hero Section -->
     <section class="w-full py-20">
